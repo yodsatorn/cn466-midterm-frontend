@@ -3,13 +3,13 @@
 </template>
 
 <script>
-  import home from '../components/Home.vue'
+import home from "../components/Home.vue";
 
-  export default {
-    name: 'Home',
+export default {
+  name: "Home",
 
-    components: {
-      home,
-    },
-  }
+  components: {
+    home,
+  },
+};
 </script>

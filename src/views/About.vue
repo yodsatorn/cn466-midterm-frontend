@@ -3,13 +3,11 @@
 </template>
 
 <script>
-  import about from '../components/About.vue'
+import about from "../components/About.vue";
 
-  export default {
-    
-
-    components: {
-      about,
-    },
-  }
+export default {
+  components: {
+    about,
+  },
+};
 </script>
