@@ -3,13 +3,6 @@
     <v-card-title>
       Incubator
       <v-spacer></v-spacer>
-
-      <v-select
-        v-model="select"
-        :items="select_items"
-        style="max-width: 300px;"
-        class="mx-3"
-      ></v-select>
       <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
@@ -17,7 +10,7 @@
         single-line
         hide-details
         style="max-width: 300px;"
-        class="mt-n4"
+        
       ></v-text-field>
     </v-card-title>
     <v-data-table
@@ -33,20 +26,16 @@
 import axios from "axios";
 
 export default {
+  props:{
+    "select":Number
+  },
+
   data() {
     return {
       // Data table
       data: [],
       search: "",
-
-      // Select box
-      select: 1,
-      select_items: [
-        { text: "Incubator #1", value: 1 },
-        { text: "Incubator #2", value: 2 },
-        { text: "Incubator #3", value: 3 },
-        { text: "ALL", value: -1 },
-      ],
+      
 
       // UI function
       loading: true,
