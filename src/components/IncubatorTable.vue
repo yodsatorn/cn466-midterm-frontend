@@ -17,7 +17,8 @@
       :items="data"
       :loading="loading"
       :search="search"
-    ></v-data-table>
+    >
+    </v-data-table>
   </v-card>
 </template>
 
@@ -42,24 +43,16 @@ export default {
   computed: {
     headers() {
       return [
-        {
-          text: "Incubator",
-          value: "IncubatorID",
-          filter: (value) => {
-            if (this.select == -1 || value == this.select) {
-              return true;
-            }
-            return false;
-          },
-        },
-        { text: "pressure", value: "pressure" },
         { text: "temperature", value: "temperature" },
         { text: "humidity", value: "humidity" },
+        { text: "pressure", value: "pressure" },
         { text: "timestamp", value: "timestamp" },
+        { text: "Incubator", value: "IncubatorID" },
       ];
     },
   },
-  methods: {},
+  methods: {
+  },
   beforeCreate() {
     axios
       .get("https://cn466-mid-server.herokuapp.com/Incubator/All")
