@@ -34,10 +34,11 @@
           </v-col>
         </v-row>
       </v-container>
-      <v-card-tile>Temperature</v-card-tile>
+      <br>
+      <v-card-title>Temperature</v-card-title>
       <v-sparkline
         :value="getTempInID(this.select)"
-        :gradient="gradient"
+        :gradient="gradientTemp"
         :smooth="radius || false"
         :padding="padding"
         :line-width="width"
@@ -48,10 +49,11 @@
         :auto-line-width="autoLineWidth"
         auto-draw
       ></v-sparkline>
-      <v-card-tile>Humidity</v-card-tile>
+      <br>
+      <v-card-title>Humidity</v-card-title>
       <v-sparkline
         :value="getHumidInID(this.select)"
-        :gradient="gradient"
+        :gradient="gradientHumid"
         :smooth="radius || false"
         :padding="padding"
         :line-width="width"
@@ -62,10 +64,11 @@
         :auto-line-width="autoLineWidth"
         auto-draw
       ></v-sparkline>
-      <v-card-tile>Pressure</v-card-tile>
+      <br>
+      <v-card-title>Pressure</v-card-title>
       <v-sparkline
         :value="getPressInID(this.select)"
-        :gradient="gradient"
+        :gradient="gradientPress"
         :smooth="radius || false"
         :padding="padding"
         :line-width="width"
@@ -86,12 +89,11 @@ import axios from "axios";
 import IncubatorTable from "./IncubatorTable.vue";
 
 const gradients = [
-  ["#222"],
-  ["#42b3f4"],
-  ["red", "orange", "yellow"],
-  ["purple", "violet"],
-  ["#00c6ff", "#F0F", "#FF0"],
-  ["#f72047", "#ffd200", "#1feaea"],
+  
+  ["#2980B9", "#6DD5FA", "#FFEDBC", "#ED4264" ],
+  ["#5433FF", "#20BDFF", "#A5FECB"],
+  ["#4AC29A",  "#BDFFF3"],
+  
 ];
 
 export default {
@@ -142,11 +144,13 @@ export default {
         text: "",
       },
     ],
-    width: 2,
+    width: 1,
     radius: 10,
     padding: 8,
     lineCap: "round",
-    gradient: gradients[5],
+    gradientTemp: gradients[0],
+    gradientHumid: gradients[1],
+    gradientPress: gradients[2],
     gradientDirection: "top",
     gradients,
     fill: false,
