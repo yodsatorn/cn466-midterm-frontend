@@ -8,7 +8,6 @@
         <router-link to="/about"> About </router-link>
       </li>
     </ul>
-
     <router-view></router-view>
   </v-app>
 </template>

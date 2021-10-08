@@ -10,7 +10,6 @@
         single-line
         hide-details
         style="max-width: 300px;"
-        
       ></v-text-field>
     </v-card-title>
     <v-data-table
@@ -26,8 +25,8 @@
 import axios from "axios";
 
 export default {
-  props:{
-    "select":Number
+  props: {
+    select: Number,
   },
 
   data() {
@@ -35,7 +34,6 @@ export default {
       // Data table
       data: [],
       search: "",
-      
 
       // UI function
       loading: true,

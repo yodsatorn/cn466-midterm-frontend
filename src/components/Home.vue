@@ -3,9 +3,7 @@
     <h1>
       Home
     </h1>
-    
     <v-spacer></v-spacer>
-
     <v-card class="mx-auto" style="max-width:100% ;">
       <v-card-title>
         Incubator status
@@ -36,7 +34,6 @@
           </v-col>
         </v-row>
       </v-container>
-
       <v-card-tile>Temperature</v-card-tile>
       <v-sparkline
         :value="getTempInID(this.select)"
@@ -79,16 +76,15 @@
         :auto-line-width="autoLineWidth"
         auto-draw
       ></v-sparkline>
-      <incubatortable
-        :select="select"
-      ></incubatortable>
+      <incubatortable :select="select"></incubatortable>
     </v-card>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
-import IncubatorTable from './IncubatorTable.vue';
+import IncubatorTable from "./IncubatorTable.vue";
+
 const gradients = [
   ["#222"],
   ["#42b3f4"],
@@ -99,11 +95,9 @@ const gradients = [
 ];
 
 export default {
-
-  components:{
-    incubatortable: IncubatorTable
+  components: {
+    incubatortable: IncubatorTable,
   },
-
   data: () => ({
     temp1: [],
     temp2: [],
@@ -114,6 +108,7 @@ export default {
     press1: [],
     press2: [],
     press3: [],
+
     // Select box
     select: 1,
     select_items: [
@@ -147,7 +142,6 @@ export default {
         text: "",
       },
     ],
-
     width: 2,
     radius: 10,
     padding: 8,
@@ -159,7 +153,6 @@ export default {
     type: "trend",
     autoLineWidth: false,
   }),
-
   methods: {
     getInfo(InID) {
       axios
@@ -176,42 +169,34 @@ export default {
           this.loading = false;
         });
     },
-    getTempInID(InID){
-      if(InID == 1){
+    getTempInID(InID) {
+      if (InID == 1) {
         return this.temp1;
-      }
-      else if(InID == 2){
+      } else if (InID == 2) {
         return this.temp2;
-      }
-      else{
+      } else {
         return this.temp3;
       }
     },
-    getHumidInID(InID){
-      if(InID == 1){
+    getHumidInID(InID) {
+      if (InID == 1) {
         return this.humid1;
-      }
-      else if(InID == 2){
+      } else if (InID == 2) {
         return this.humid2;
-      }
-      else{
+      } else {
         return this.humid3;
       }
     },
-    getPressInID(InID){
-      if(InID == 1){
+    getPressInID(InID) {
+      if (InID == 1) {
         return this.press1;
-      }
-      else if(InID == 2){
+      } else if (InID == 2) {
         return this.press2;
-      }
-      else{
+      } else {
         return this.press3;
       }
-    }
-
+    },
   },
-
   beforeCreate() {
     axios
       .get(`https://cn466-mid-server.herokuapp.com/Incubator/All`)
@@ -237,7 +222,6 @@ export default {
         console.log(err);
       });
   },
-
   created() {
     setInterval(() => {
       this.getInfo(this.select);
