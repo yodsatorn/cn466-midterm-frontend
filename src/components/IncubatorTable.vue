@@ -18,6 +18,8 @@
       :loading="loading"
       :search="search"
     >
+      <template v-slot:[`header.IncubatorID`]></template>
+      <template v-slot:[`item.IncubatorID`]></template>
     </v-data-table>
   </v-card>
 </template>
@@ -47,12 +49,23 @@ export default {
         { text: "humidity", value: "humidity" },
         { text: "pressure", value: "pressure" },
         { text: "timestamp", value: "timestamp" },
-        { text: "Incubator", value: "IncubatorID" },
+        {
+          text: "Incubator",
+          value: "IncubatorID",
+          filter: (value) => {
+            if (value == this.select) {
+              return true;
+            }
+            return false;
+          },
+          sortable: false,
+          width: 0,
+          class: "ma-0 pa-0"
+        },
       ];
     },
   },
-  methods: {
-  },
+  methods: {},
   beforeCreate() {
     axios
       .get("https://cn466-mid-server.herokuapp.com/Incubator/All")
