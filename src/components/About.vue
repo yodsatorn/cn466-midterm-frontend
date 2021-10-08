@@ -37,7 +37,7 @@
               mdi-github
             </v-icon>
             <v-text> Back-end APIs : </v-text>
-            <a href="https://www.instagram.com/poonnatuchh/"
+            <a href="https://github.com/6110613228/cn466-midtern-backend"
               >Link to Git repository</a
             >
             <br />
@@ -46,7 +46,7 @@
               mdi-github
             </v-icon>
             <v-text> Front-end : </v-text>
-            <a href="https://github.com/yodsatorn/cn466-midterm-frontend.git"
+            <a href="https://github.com/yodsatorn/cn466-midterm-frontend"
               >Link to Git repository</a
             >
             <br />

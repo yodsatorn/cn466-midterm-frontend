@@ -28,7 +28,7 @@
                 <v-card-title v-text="card.title"></v-card-title>
               </v-img>
               <v-card-subtitle>
-                {{ card.text }}
+                {{ card.text }} 
               </v-card-subtitle>
             </v-card>
           </v-col>
@@ -101,6 +101,13 @@ export default {
     incubatortable: IncubatorTable,
   },
   data: () => ({
+
+    //unit
+    tempUnit: "   °C",
+    humidUnit: "   %",
+    pressUnit: "   PA",
+
+    //array for chart
     temp1: [],
     temp2: [],
     temp3: [],
@@ -123,21 +130,21 @@ export default {
     loading: true,
     cards: [
       {
-        title: "Temperature",
+        title: "Temperature  ( °C )",
         src:
           "https://images.pexels.com/photos/1454752/pexels-photo-1454752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         flex: 4,
         text: "",
       },
       {
-        title: "Humidity",
+        title: "Humidity  ( % )",
         src:
           "https://images.pexels.com/photos/2929290/pexels-photo-2929290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         flex: 4,
         text: "",
       },
       {
-        title: "Pressure",
+        title: "Pressure  ( Pa )",
         src:
           "https://media.istockphoto.com/photos/pressure-device-for-industry-system-picture-id908299346?k=20&m=908299346&s=612x612&w=0&h=iWFvONEvcXN7sxh6t0J4E8lsT61y3jBbpCGZf2fqnGs=",
         flex: 4,
@@ -162,9 +169,9 @@ export default {
       axios
         .get(`https://cn466-mid-server.herokuapp.com/Incubator/Latest/${InID}`)
         .then((response) => {
-          this.cards[0].text = response.data.data.temperature;
-          this.cards[1].text = response.data.data.humidity;
-          this.cards[2].text = response.data.data.pressure;
+          this.cards[0].text = (response.data.data.temperature);
+          this.cards[1].text = (response.data.data.humidity);
+          this.cards[2].text = (response.data.data.pressure);
         })
         .catch((err) => {
           console.log(err);
@@ -199,6 +206,21 @@ export default {
       } else {
         return this.press3;
       }
+    },
+    tempFormatted(rawTemp){
+      var formattedTemp;
+      formattedTemp = rawTemp+" °C";
+      return formattedTemp;
+    },
+    humidFormatted(rawHumid){
+      var formattedHumid;
+      formattedHumid = rawHumid+" %";
+      return formattedHumid;
+    },
+    pressFormatted(rawPress){
+      var formattedPress;
+      formattedPress = rawPress+" Pa"
+      return formattedPress
     },
   },
   beforeCreate() {
