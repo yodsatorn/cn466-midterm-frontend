@@ -1,15 +1,15 @@
 <template>
   <v-container>
     <h1>About page</h1>
-    <v-card class="mx-auto" max-width="800">
+    <v-card class="mx-auto" style="max-width:100% ;">
       <v-img
         src="https://images.pexels.com/photos/3183190/pexels-photo-3183190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
         height="300px"
       ></v-img>
-      <v-card-title>
+      <v-card-title class="text-h5">
         CN466 - Midterm Project
       </v-card-title>
-      <v-card-subtitle>
+      <v-card-subtitle class="text-body-1">
         This project is about ....
       </v-card-subtitle>
       <v-card-actions>
@@ -24,12 +24,26 @@
       <v-expand-transition>
         <div v-show="show">
           <v-divider></v-divider>
-          <v-card-text>
-            Member <br />
+          <v-card-title >
+            Member
+          </v-card-title>
+          <v-card-subtitle >
             - 6110613095 : Yodsatorn Pantongkam <br />
             - 6110613129 : Rathapol Putharaksa <br />
             - 6110613228 : Poonnatuch Boonyarattanasoontorn <br />
-          </v-card-text>
+          </v-card-subtitle>
+          <v-col>
+            <v-icon large>
+              mdi-github
+            </v-icon>
+            <br>  <br>
+            <v-icon large>
+              mdi-github
+            </v-icon>
+            <v-icon large>
+              mdi-github
+            </v-icon>
+          </v-col>
         </div>
       </v-expand-transition>
     </v-card>
