@@ -3,10 +3,8 @@
 ### About 
 This repository is made for CN466:IoT midtern project as a front-end using vue.js for development provided by **Yodsatorn P.**
 
-Postman APIs document can be found [here](https://documenter.getpostman.com/view/17798233/UUy4eRtE).
-
-Back-end APIs repo provided by **Poonnatuch B.** can be found [here](https://github.com/6110613228/cn466-midtern-backend).
-
+Postman APIs document can be found [here](https://documenter.getpostman.com/view/17798233/UUy4eRtE).\
+Back-end APIs repo provided by **Poonnatuch B.** can be found [here](https://github.com/6110613228/cn466-midtern-backend).\
 Line Chatbot repo provided by **Rathapol P.** can be found [here](https://github.com/Rathapol-Putharaksa/linebot_CN466).
 
 ---
