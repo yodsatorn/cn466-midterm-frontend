@@ -33,6 +33,7 @@
       </v-list>
     </v-navigation-drawer>
     <router-view></router-view>
+    <v-spacer></v-spacer>
   </v-app>
 </template>
 

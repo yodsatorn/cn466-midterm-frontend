@@ -79,7 +79,7 @@
         :auto-line-width="autoLineWidth"
         auto-draw
       ></v-sparkline>
-      <incubatortable :select="select"></incubatortable>
+      <incubatortable class="ma-3" :select="select"></incubatortable>
     </v-card>
   </v-container>
 </template>
