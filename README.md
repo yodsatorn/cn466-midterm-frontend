@@ -1,7 +1,7 @@
 # cn466-midterm-frontend
 
 ### About 
-This repository is made for CN466:IoT midtern project as a front-end using vue.js for development provided by **Yodsatorn P.**
+This repository is made for CN466:IoT midterm project as a front-end using vue.js for development provided by **Yodsatorn P.**
 
 Postman APIs document can be found [here](https://documenter.getpostman.com/view/17798233/UUy4eRtE).\
 Back-end APIs repo provided by **Poonnatuch B.** can be found [here](https://github.com/6110613228/cn466-midtern-backend).\
