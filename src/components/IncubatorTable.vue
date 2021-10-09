@@ -13,10 +13,16 @@
       ></v-text-field>
     </v-card-title>
     <v-data-table
+      dense
       :headers="headers"
       :items="data"
       :loading="loading"
       :search="search"
+      :footer-props="{
+        'items-per-page-options': [
+          10, 50, 100, 300, 500, 1000, 2000, -1
+        ]
+      }"
     >
       <template v-slot:[`header.IncubatorID`]></template>
       <template v-slot:[`item.IncubatorID`]></template>
@@ -60,7 +66,7 @@ export default {
           },
           sortable: false,
           width: 0,
-          class: "ma-0 pa-0"
+          class: "ma-0 pa-0",
         },
       ];
     },
