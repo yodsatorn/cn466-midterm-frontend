@@ -10,7 +10,7 @@
         CN466 - Midterm Project
       </v-card-title>
       <v-card-subtitle class="text-body-1">
-        This project is built as part of the CN466 midterm project, the front-end is provided by Yodsatorn Pantongkam using Vue.js as the framework front-end for development. 
+        This project is built as part of the CN466 midterm project, the front-end is provided by Yodsatorn Pantongkam using Vue.js as the Front-end framework for development. 
       </v-card-subtitle>
       <v-card-actions>
         <v-btn color="orange lighten-2" text>

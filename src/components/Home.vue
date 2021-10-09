@@ -90,7 +90,7 @@ import IncubatorTable from "./IncubatorTable.vue";
 
 const gradients = [
   
-  ["#2980B9", "#6DD5FA", "#FFEDBC", "#ED4264" ],
+  ["#ED4264", "#FFEDBC", "#6DD5FA", "#2980B9"],
   ["#5433FF", "#20BDFF", "#A5FECB"],
   ["#4AC29A",  "#BDFFF3"],
   
