@@ -92,7 +92,7 @@ const gradients = [
   
   ["#ED4264", "#FFEDBC", "#6DD5FA", "#2980B9"],
   ["#5433FF", "#20BDFF", "#A5FECB"],
-  ["#4AC29A",  "#BDFFF3"],
+  [ "#BDFFF3", "#4AC29A"],
   
 ];
 
@@ -101,11 +101,6 @@ export default {
     incubatortable: IncubatorTable,
   },
   data: () => ({
-
-    //unit
-    tempUnit: "   °C",
-    humidUnit: "   %",
-    pressUnit: "   PA",
 
     //array for chart
     temp1: [],
